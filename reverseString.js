@@ -6,9 +6,7 @@ Reverse the provided string. You may need to turn the string into an array befor
 ************************************************************************************************************************************
 
 function reverseString(str) {
-  var arr = [];
-  var newStr = "";
-  arr = str.split("").reverse();
+  var arr = str.split("").reverse();
   return arr.join("");
 }
 
