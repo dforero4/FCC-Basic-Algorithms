@@ -17,8 +17,10 @@ function mutation(arr) {
   var sec = arr[1].toLowerCase();
   
   for(var i=0; i<sec.length; i++){
+
     if(first.indexOf(sec[i])==-1){
       return false;
+
     }
   }
   
