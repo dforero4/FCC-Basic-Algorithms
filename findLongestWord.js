@@ -6,15 +6,15 @@ Your response should be a number.
 ***********************************************************************
 
 function findLongestWord(str) {
-  var arr = str.split(" ");
-  var max = 0;
-  for(var i=0; i<arr.length; i++){
-    if(arr[i].length > max){
-      max = arr[i].length;
-    }
-  }
+  var arr = str.split(" ").map(function(x) {
+    return x.length;
+  });
   
-  return max;
+  arr.sort(function(a,b) {
+    return a-b;
+  });
+  
+  return arr[arr.length-1];
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
